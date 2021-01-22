@@ -4,10 +4,10 @@ Built using Class Based Components.
 
 QUICK START
 
-# Install dependencies
+# Quick Start
 
+Install dependencies
 npm install
 
-# Serve on localhost:3000
-
+Serve on localhost:3000
 npm start
