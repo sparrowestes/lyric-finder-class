@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
-// import Spinner from "../layout/Spinner";
+import Spinner from "../layout/Spinner";
 import Track from "../tracks/Track";
 
 class Tracks extends Component {
@@ -11,8 +11,7 @@ class Tracks extends Component {
           const { track_list, heading } = value;
           //   console.log(value);
           if (track_list === undefined || track_list.length === 0) {
-            // return <Spinner />;
-            return <h3>Loading...</h3>;
+            return <Spinner />;
           } else {
             return (
               <React.Fragment>
