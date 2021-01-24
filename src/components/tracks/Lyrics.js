@@ -13,14 +13,14 @@ class Lyrics extends Component {
   componentDidMount() {
     axios
       .get(
-        `http://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=af51884ebf5dbcb62e97871ac7b6b800`
+        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=af51884ebf5dbcb62e97871ac7b6b800`
       )
       .then((res) => {
         // console.log(res.data);
         this.setState({ lyrics: res.data.message.body.lyrics });
 
         return axios.get(
-          `http://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=af51884ebf5dbcb62e97871ac7b6b800`
+          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=af51884ebf5dbcb62e97871ac7b6b800`
         );
       })
       .then((res) => {
